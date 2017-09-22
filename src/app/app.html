@@ -1,0 +1,14 @@
+<h1 [class.red]="myProperty" [style.border]="myProperty?'1px solid gray':'none'">{{getTitle()}}</h1>
+
+
+
+<app-home></app-home>
+
+
+{{ myProperty ? 'Yes': 'No'}}
+
+
+<!--banana in the box-->
+<input type="text" [(ngModel)]="title" />
+
+<button (click)="onClick(1)">Save</button>
