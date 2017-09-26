@@ -1,38 +1,5 @@
-<h1 [ngClass]="cls" [ngStyle]="style" [hidden]="myProperty" >Task List</h1>
-
-<button (click)="toggleHeading()">Toggle</button>
-
-<!--zen coding-->
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>Task</th>
-            <th>Index</th>
-            <th>Even</th>
-            <th>Odd</th>
-            <th>First</th>
-            <th>Last</th>
-            <th>Middle</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let task of tasks;let idx=index;let evn=even;let odd=odd;let fst=first;let lst=last;let mdl=middle;"
-         >
-          <!--[ngClass]="evn?'redbg':'greenbg'"-->
-            <td>{{task.name}}</td>
-            <td>{{idx}}</td>
-            <td>{{evn}}</td>
-            <td>{{odd}}</td>
-            <td>{{fst}}</td>
-            <td>{{lst}}</td>
-            <td>{{mdl}}</td>
-        </tr>
-    </tbody>
-</table>
-
-
-<div [ngSwitch]="tasks[0].priority">
-    <div *ngSwitchCase="'high'" class="alert alert-danger">High</div>
-    <div  *ngSwitchCase="'medium'" class="alert alert-warning">Medium</div>
-    <div *ngSwitchCase="'low'" class="alert alert-success">Low</div>
+<div class="col-md-5">
+    <div class="well" *ngFor="let task of tasks">
+        <app-task [task]="task"></app-task>
+    </div>
 </div>

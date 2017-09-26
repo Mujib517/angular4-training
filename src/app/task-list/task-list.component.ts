@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TaskService } from "../../shared/task.service";
 
 @Component({
     selector: 'app-task-list',
@@ -7,23 +8,10 @@ import { Component } from '@angular/core';
 })
 export class TaskListComponent {
 
-    myProperty: boolean;
+    tasks: any;
 
-    tasks: any = [
-        { name: "Recharge mobile", priority: 'low' },
-        { name: "Buy groceries" },
-        { name: "Go Shop" }
-    ];
-
-    cls = ['red', 'greenbg'];
-    style = { 'border': '5px solid gray' };
-
-    toggleHeading() {
-        this.myProperty = !this.myProperty;
+    constructor() {
+        var taskSvc = new TaskService();
+        this.tasks = taskSvc.get();
     }
-
-    //undefined
-    //null
-    //""
-    //false
 }
