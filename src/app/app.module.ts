@@ -7,11 +7,15 @@ import { TaskListComponent } from "./task-list/task-list.component";
 import { TitleComponent } from './title/title.component';
 import { TaskComponent } from "./task/task.component";
 import { FooterComponent } from './footer/footer.component';
+import { UserListComponent } from "./user-list/user-list.component";
+import { HttpModule } from "@angular/http";
+import { TimePipe } from "../shared/time.pipe";
 
 
 @NgModule({
-    imports: [BrowserModule, FormsModule],
-    declarations: [AppComponent, HomeComponent,TaskListComponent, TitleComponent,TaskComponent, FooterComponent],
+    imports: [BrowserModule, FormsModule,HttpModule],
+    declarations: [AppComponent, HomeComponent,TaskListComponent, 
+    TitleComponent,TaskComponent, FooterComponent,UserListComponent,TimePipe],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,22 @@
+{
+    "tasks": [
+        {
+            "name": "Recharge mobile",
+            "priority": "low",
+            "category": "General",
+            "completed": false,
+            "createdDate": "Wed Sep 27 2017 08:03:38 GMT+0530"
+        },
+        {
+            "name": "Buy groceries",
+            "priority": "high",
+            "category": "Shopping",
+            "completed": false,
+            "createdDate": "Wed Sep 27 2017 08:03:38 GMT+0530"
+        },
+        {
+            "name": "Go Shop",
+            "priority": "medium",
+            "category": "Shopping", "completed": true, "createdDate": "Wed Sep27 2017 08: 03: 38 GMT+0530" }
+        ]
+    }
