@@ -4,7 +4,7 @@ import * as moment from 'moment';
 @Component({
     selector: 'app-task',
     template: `
-          <h3>{{task.name | uppercase}}</h3>
+       <h3>{{task.name | uppercase}}</h3>
            <b class="text-muted">{{task.category | lowercase}}</b>
            <div class="text-muted">Completed: 
                 <input type="checkbox" disabled="true" [(ngModel)]="task.completed"/>
