@@ -10,12 +10,14 @@ import { FooterComponent } from './footer/footer.component';
 import { UserListComponent } from "./user-list/user-list.component";
 import { HttpModule } from "@angular/http";
 import { TimePipe } from "../shared/time.pipe";
+import { TaskService } from "../shared/task.service";
 
 
 @NgModule({
     imports: [BrowserModule, FormsModule,HttpModule],
     declarations: [AppComponent, HomeComponent,TaskListComponent, 
     TitleComponent,TaskComponent, FooterComponent,UserListComponent,TimePipe],
+    providers:[TaskService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

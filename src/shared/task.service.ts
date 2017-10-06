@@ -1,11 +1,19 @@
 import { Http } from "@angular/http";
+import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
 
+@Injectable()
 export class TaskService {
 
-    constructor(private http:Http){}
+    constructor(private http: Http) { }
 
-    get() {
+    get(): Observable<any> {
         return this.http.get("http://localhost:4000/tasks")
-            .map(response=>response.json());
+            .map(response => response.json()); //serialization
+    }
+
+    save(task): Observable<any> {
+        return this.http.post("http://localhost:4000/tasks",task)
+            .map(response => response.json());
     }
 }
