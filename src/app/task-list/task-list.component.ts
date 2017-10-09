@@ -4,8 +4,7 @@ import { Http } from '@angular/http';
 
 @Component({
     selector: 'app-task-list',
-    templateUrl: './task-list.html',
-    providers: [TaskService],
+    templateUrl: './task-list.html'
 })
 export class TaskListComponent {
 

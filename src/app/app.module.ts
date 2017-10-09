@@ -11,12 +11,13 @@ import { UserListComponent } from "./user-list/user-list.component";
 import { HttpModule } from "@angular/http";
 import { TimePipe } from "../shared/time.pipe";
 import { TaskService } from "../shared/task.service";
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
-    imports: [BrowserModule, FormsModule,HttpModule],
+    imports: [BrowserModule, FormsModule,HttpModule,SharedModule],
     declarations: [AppComponent, HomeComponent,TaskListComponent, 
-    TitleComponent,TaskComponent, FooterComponent,UserListComponent,TimePipe],
+    TitleComponent,TaskComponent, FooterComponent,UserListComponent],
     providers:[TaskService],
     bootstrap: [AppComponent]
 })
