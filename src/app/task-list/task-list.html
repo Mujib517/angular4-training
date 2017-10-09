@@ -1,28 +1,29 @@
 <div class="row">
-    <form #frm="ngForm" novalidate>
-        <div class="col-md-5">
+    <div class="col-md-4">
+        <form #frm="ngForm">
             <div class="form-group">
-                <input #txtName="ngModel" type="text" placeholder="Name" 
-                    class="form-control" [(ngModel)]="task.name" name="name" required/>
-                <span class="text-danger" *ngIf="txtName.touched && txtName.errors.required">Required</span>
+                <input #txtName="ngModel" type="text" name="name" placeholder="Name" class="form-control" [(ngModel)]="task.name" required
+                />
+                <span class="text-danger" *ngIf="txtName.dirty && txtName.errors.required">Required</span>
+                <span class="text-danger" *ngIf="txtName.dirty && txtName.errors.required">Min 3 Chars</span>
+                <span class="text-danger" *ngIf="txtName.dirty && txtName.errors.required">Max 10 Chars</span>
             </div>
             <div class="form-group">
-                <input #txtCategory="ngModel" required type="text" placeholder="Category" class="form-control" [(ngModel)]="task.category"
-                    name="category" /> 
-                <span class="text-danger" *ngIf="txtCategory.dirty && txtCategory.errors.required">Required</span>
+                <input type="text" #txtCategory="ngModel" name="category" placeholder="Category" class="form-control" [(ngModel)]="task.category"
+                    required/>
+                <span class="text-danger" *ngIf="txtCategory.dirty&&txtCategory.errors.required">Required</span>
             </div>
             <div class="form-group">
-                <input required type="text" placeholder="Priority" class="form-control" [(ngModel)]="task.priority" name="priority" />
+                <input type="text" name="priority" placeholder="Category" class="form-control" [(ngModel)]="task.priority" />
             </div>
             <div class="form-group">
-                <button [disabled]="frm.invalid" class="btn btn-success pull-right" (click)="onSave()">
-
-                    Save New Task
+                <button class="btn btn-success pull-right" (click)="onSave()" [disabled]="frm.invalid">
+                    Save New task
                     <i class="glyphicon glyphicon-plus"></i>
                 </button>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
 
 <div class="col-md-5">
