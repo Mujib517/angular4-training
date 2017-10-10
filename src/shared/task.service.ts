@@ -14,7 +14,8 @@ export class TaskService {
 
     save(task): Observable<any> {
         return this.http.post("http://localhost:4000/tasks", task)
-            .map(response => response.json());
+            .map(response => response.json())
+            .catch((err) => Observable.throw(err));
     }
 
     remove(id): Observable<any> {

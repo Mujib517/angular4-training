@@ -10,6 +10,7 @@ export class TaskListComponent {
 
     tasks: any;
     task: any = {};
+    hasError;
 
     //constructor injection
     constructor(private taskSvc: TaskService) {
@@ -17,7 +18,12 @@ export class TaskListComponent {
     }
 
     loadData() {
-        this.tasks = this.taskSvc.get();
+        this.taskSvc.get()
+            .subscribe(
+
+            (data) => this.tasks = data,
+            (err) => this.hasError = true
+            );
     }
 
     onNotified(event) {
