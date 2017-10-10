@@ -16,22 +16,11 @@ export class TaskListComponent {
         this.loadData();
     }
 
-    onSave() {
-        this.task.id = Math.floor((Math.random() * 100))
-        this.taskSvc.save(this.task)
-            .subscribe(
-            () => {
-                this.loadData();
-                this.clearAll();
-            })
-    }
-
     loadData() {
         this.tasks = this.taskSvc.get();
     }
 
-    clearAll() {
-        this.task = {};
+    onNotified(event) {
+        console.log(event);
     }
-
 }

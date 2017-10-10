@@ -1,6 +1,7 @@
 {
   "tasks": [
     {
+      "id": 1,
       "name": "Recharge mobile",
       "priority": "low",
       "category": "General",
@@ -8,6 +9,7 @@
       "createdDate": "Wed Sep 27 2017 08:03:38 GMT+0530"
     },
     {
+      "id": 2,
       "name": "Buy groceries",
       "priority": "high",
       "category": "Shopping",
@@ -15,6 +17,7 @@
       "createdDate": "Wed Sep 27 2017 08:03:38 GMT+0530"
     },
     {
+      "id": 3,
       "name": "Go Shop",
       "priority": "medium",
       "category": "Shopping",
@@ -22,37 +25,16 @@
       "createdDate": "Wed Sep27 2017 08: 03: 38 GMT+0530"
     },
     {
+      "id": 4,
       "name": "My New Task",
       "category": "General",
-      "priority": "low",
-      "id": 4
-    },
-    {
-      "name": "My Task 2",
-      "category": "General",
-      "priority": "low",
-      "id": 19
+      "priority": "low"
     },
     {
       "name": "My Task 3",
       "category": "General",
       "priority": "low",
       "id": 6
-    },
-    {
-      "name": "My Task 4",
-      "category": "General",
-      "priority": "low",
-      "id": 54
-    },
-    {
-      "name": "My New Task5",
-      "category": "Shopping",
-      "priority": "high",
-      "id": 41
-    },
-    {
-      "id": 69
     }
   ]
 }

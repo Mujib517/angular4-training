@@ -12,13 +12,15 @@ import { HttpModule } from "@angular/http";
 import { TimePipe } from "../shared/time.pipe";
 import { TaskService } from "../shared/task.service";
 import { SharedModule } from '../shared/shared.module';
-
+import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { NewTaskComponent } from './new-task/new-task.component';
 
 @NgModule({
-    imports: [BrowserModule, FormsModule,HttpModule,SharedModule],
-    declarations: [AppComponent, HomeComponent,TaskListComponent, 
-    TitleComponent,TaskComponent, FooterComponent,UserListComponent],
-    providers:[TaskService],
+    imports: [BrowserModule, FormsModule, HttpModule, SharedModule, RouterModule],
+    declarations: [AppComponent, HomeComponent, TaskListComponent,
+        TitleComponent, TaskComponent, FooterComponent, UserListComponent, HeaderComponent, NewTaskComponent],
+    providers: [TaskService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
