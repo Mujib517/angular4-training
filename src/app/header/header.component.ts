@@ -12,10 +12,10 @@ import { Component, OnInit } from '@angular/core';
                   </div>
               </div>
               <ul class="nav navbar-nav">
-                  <li><a href="">Home</a></li>
-                  <li><a href="">About</a></li>
-                  <li><a href="">Tasks</a></li>
-                  <li><a href="">Contact</a></li>
+                  <li><a routerLink="/">Home</a></li>
+                  <li><a routerLink="/about">About</a></li>
+                  <li><a routerLink="/tasks">Tasks</a></li>
+                  <li><a routerLink="/contact">Contact</a></li>
               </ul>
           </div>
       </div>

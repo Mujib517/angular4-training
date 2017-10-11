@@ -2,11 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  template: `
-    <p>
-      home Works!
-    </p>
-  `,
+  template: `<h1>Home Page</h1>`,
   styles: []
 })
 export class HomeComponent { }

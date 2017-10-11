@@ -12,14 +12,18 @@ import { HttpModule } from "@angular/http";
 import { TimePipe } from "../shared/time.pipe";
 import { TaskService } from "../shared/task.service";
 import { SharedModule } from '../shared/shared.module';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { NewTaskComponent } from './new-task/new-task.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { TaskDetailComponent } from './task-detail/task-detail.component';
+import { AppRouterModule } from './router.module';
 
 @NgModule({
-    imports: [BrowserModule, FormsModule, HttpModule, SharedModule, RouterModule],
+    imports: [BrowserModule, FormsModule, HttpModule, SharedModule,AppRouterModule],
     declarations: [AppComponent, HomeComponent, TaskListComponent,
-        TitleComponent, TaskComponent, FooterComponent, UserListComponent, HeaderComponent, NewTaskComponent],
+        TitleComponent, TaskComponent, FooterComponent, UserListComponent, HeaderComponent, NewTaskComponent, AboutComponent, ContactComponent, TaskDetailComponent],
     providers: [TaskService],
     bootstrap: [AppComponent]
 })

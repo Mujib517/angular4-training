@@ -24,4 +24,9 @@ export class TaskService {
         return this.http.delete(`${this.url}${id}`)
             .map(response => response.json());
     }
+
+    getById(id){
+        return this.http.get(`${this.url}${id}`)
+        .map(response => response.json());
+    }
 }

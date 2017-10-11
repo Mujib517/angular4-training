@@ -1,3 +1,7 @@
+<div>
+    <button class="btn btn-success" routerLink="/tasks/new">New Task</button>
+</div>
+
 
 <div *ngIf="hasError" class="alert alert-danger">
     Failed to load data. Please try again
@@ -5,6 +9,6 @@
 
 <div class="col-md-5">
     <div class="well" *ngFor="let task of tasks">
-        <app-task [task]="task" (notify)="onNotified($event)"></app-task>
+        <app-task [routerLink]="'/tasks/'+task.id" [task]="task" (notify)="onNotified($event)"></app-task>
     </div>
 </div>
