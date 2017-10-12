@@ -1,4 +1,9 @@
 {
+  "categories": [
+    "General",
+    "Shopping",
+    "Others"
+  ],
   "tasks": [
     {
       "id": 1,
@@ -56,6 +61,24 @@
       "category": "General",
       "priority": "High",
       "id": 60
+    },
+    {
+      "category": "Shopping",
+      "name": "My New Shopping task",
+      "priority": "High",
+      "id": 47
+    },
+    {
+      "name": "My New Task 8",
+      "category": "Shopping",
+      "priority": "High",
+      "id": 85
+    },
+    {
+      "priority": "Medium",
+      "name": "My New Task 9",
+      "category": "Other",
+      "id": 29
     }
   ]
 }

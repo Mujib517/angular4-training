@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { TaskService } from "../../shared/task.service";
 import { Http } from '@angular/http';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-task-list',
@@ -13,18 +14,18 @@ export class TaskListComponent implements OnInit, OnDestroy {
     hasError;
 
     //constructor injection
-    constructor(private taskSvc: TaskService) {
+    constructor(private taskSvc: TaskService, private activatedRoute: ActivatedRoute) {
 
     }
 
     //life cycle hook
     ngOnInit() {
-        this.loadData();
+        this.tasks = this.activatedRoute.snapshot.data["tasks"];
     }
 
     ngOnDestroy() {
-        console.log("unsubscribing");
-        this.obs.unsubscribe();
+        // console.log("unsubscribing");
+        // this.obs.unsubscribe();
     }
 
     loadData() {

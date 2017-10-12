@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-header',
   template: `<header>
   <nav>
+  
       <div class="container">
           <div class="navbar navbar-inverse">
               <div class="navbar-header">
