@@ -12,8 +12,11 @@ import {
 @NgModule({
     imports: [BrowserModule, FormsModule, HttpModule, SharedModule, AppRouterModule],
     declarations: [AppComponent, HomeComponent, TaskListComponent,
-        TitleComponent, TaskComponent, FooterComponent, UserListComponent, HeaderComponent, NewTaskComponent, AboutComponent, ContactComponent, TaskDetailComponent],
+        TitleComponent, TaskComponent, FooterComponent, UserListComponent, 
+        HeaderComponent, NewTaskComponent, AboutComponent, ContactComponent, 
+        TaskDetailComponent],
     providers: [TaskService],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    exports: []
 })
 export class AppModule { }
