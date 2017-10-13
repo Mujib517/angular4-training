@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { TaskService } from "../../shared/task.service";
 import { Http } from '@angular/http';
 import { ActivatedRoute } from '@angular/router';
+import { Task } from '../../shared/models/task.model';
 
 @Component({
     selector: 'app-task-list',
@@ -9,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class TaskListComponent implements OnInit, OnDestroy {
     obs;
-    tasks: any;
+    tasks: Array<Task>;
     task: any = {};
     hasError;
 
