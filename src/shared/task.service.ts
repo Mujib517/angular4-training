@@ -11,7 +11,7 @@ export class TaskService {
 
     get(): Observable<any> {
         return this.http.get(this.url)
-            .map(response => response.json()); //serialization
+           // .map(response => response.json()); //serialization
     }
 
     save(task): Observable<any> {
