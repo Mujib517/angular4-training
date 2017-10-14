@@ -4,14 +4,17 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-about',
   template: `
    <h1>About Page</h1>
+
+   <button (click)="onClick()">Inc</button>
   `,
   styles: []
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent {
 
-  constructor() { }
+  myVar = 10;
 
-  ngOnInit() {
+  onClick() {
+    this.myVar += 10;
   }
 
 }
