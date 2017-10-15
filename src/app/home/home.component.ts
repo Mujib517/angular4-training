@@ -3,7 +3,7 @@ import { TaskService } from '../../shared/task.service';
 
 @Component({
   selector: 'app-home',
-  template: `<h1>Home Page</h1>
+  template: `<h2>Home Page</h2>
     <h1 [dlShow]="true">Show directive demo</h1>
 
     <h1 *dlIf="false">If Directive Demo</h1>
@@ -24,7 +24,7 @@ export class HomeComponent {
 
   //change detection
   constructor(private taskSvc: TaskService) {
-    this.interval = setInterval(() => this.count++, 1000);
+   // this.interval = setInterval(() => this.count++, 1000);
   }
 
   inc() {

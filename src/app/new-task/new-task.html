@@ -2,14 +2,14 @@
     <div class="col-md-4">
         <form #frm="ngForm">
             <div class="form-group">
-                <input #txtName="ngModel" type="text" name="name" placeholder="Name" class="form-control" [(ngModel)]="task.name" />
+                <input #txtName="ngModel" required type="text" name="name" placeholder="Name" class="form-control" [(ngModel)]="task.name" />
                 <span class="text-danger" *ngIf="txtName.dirty && txtName.errors?.required">Required</span>
                 <span class="text-danger" *ngIf="txtName.dirty && txtName.errors?.minlength">Min 3 Chars</span>
                 <span class="text-danger" *ngIf="txtName.dirty && txtName.errors?.maxlength">Max 10 Chars</span>
             </div>
             <div class="form-group">
 
-                <select #txtCategory="ngModel" [(ngModel)]="task.category" name="category" class="form-control">
+                <select #txtCategory="ngModel" [(ngModel)]="task.category" name="category" class="form-control" required>
                     <optgroup>
                         <option>--select--</option>
                         <option>General</option>
