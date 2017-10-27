@@ -4,6 +4,10 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-about',
   template: `
    <h1>About Page</h1>
+
+   &#0149;
+
+   <h1>&bull;</h1>
   `,
   styles: []
 })
