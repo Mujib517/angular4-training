@@ -1,6 +1,7 @@
 import { Http } from "@angular/http";
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
+import { Task } from "./models/task.model";
 
 @Injectable()
 export class TaskService {
@@ -9,9 +10,9 @@ export class TaskService {
 
     constructor(private http: Http) { }
 
-    get(): Observable<any> {
+    get(): Observable<Task[]> {
         return this.http.get(this.url)
-            .map(response => response.json()); //serialization
+            .map(response =><Task[]>response.json()); //serialization
     }
 
     save(task): Observable<any> {
